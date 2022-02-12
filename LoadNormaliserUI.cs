@@ -3,8 +3,8 @@
 //In SceneLoad:
 private IEnumerator BeginRoutine()
 	{
-    //in case the variable from Gamemanager is borked (variable from Gamemanager includes the whole unloading process, 
-    // (usually takes 20ms) which is less important than the actual Loading process)
+    		//in case the variable from Gamemanager is borked (variable from Gamemanager includes the whole unloading process, 
+    		// (usually takes 20ms) which is less important than the actual Loading process)
 		float loadTime = Time.realtimeSinceStartup; 
 		SceneAdditiveLoadConditional.loadInSequence = true;
 		yield return this.runner.StartCoroutine(ScenePreloader.FinishPendingOperations());
@@ -53,7 +53,7 @@ private IEnumerator BeginRoutine()
 				Debug.LogException(exception2);
 			}
 		}
-    // Wait before telling the game that it can activate the Scene
+   		// Wait before telling the game that it can activate the Scene
 		if (GameManager.loadTime != 0f)
 		{
 			loadTime = GameManager.loadTime;

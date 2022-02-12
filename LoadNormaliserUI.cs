@@ -65,6 +65,7 @@ private IEnumerator BeginRoutine()
 			"Time for loading was: ",
 			num
 		}));
+		// Rest isn't changed
 		loadOperation.allowSceneActivation = true;
 		yield return loadOperation;
 		this.RecordEndTime(SceneLoad.Phases.Activation);
